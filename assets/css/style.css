@@ -1,0 +1,77 @@
+body {
+    background: url("../images/candy.jpg") no-repeat;
+    background-size: 100%
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    background: #ffffff;
+    margin-top: 50px;
+}
+
+.gameLogo {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.gameLogo img {
+    width: 50%;
+    margin: 0px;
+}
+
+.instructions{
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    border: 5px solid black ;
+    margin-bottom: 100px;
+}
+
+.box{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.gameText{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    line-height: 1em;
+}
+
+@media screen and (max-width: 980px){
+    .gameLogo img {
+        width: 75%;
+        margin: 0px;
+    }
+    .gameText{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .gameLogo img {
+        width: 50%;
+        margin: 0px;
+    }
+    .gameText{
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .gameLogoimg {
+        width: 70%;
+        margin: 0px;
+    }
+    .gameText{
+        font-size: 26px;
+    }
+}
