@@ -106,7 +106,7 @@ function resetGame(){
 
     //print values on screen
     targetScoreW.innerHTML = "Wins: " + wins;
-    targetScoreL,innerHTML = "Losses: " + loss;
+    targetScoreL.innerHTML = "Losses: " + loss;
     targetGL.innerHTML = "Guesses left: " + guessLeft;
     targetGuessed.innerHTML = "Letters Guessed: " + guessedLetters;
 }
@@ -120,8 +120,8 @@ candyName = chooseName();
 
 //looks for key press
 document.onkeyup = function(event){
-    //captures ley press, converts to lowercase and saves
-    var keyPress = event.key.toLowercase();
+    //captures key press, converts to lowercase and saves
+    var keyPress = event.key.toLowerCase();
 
     switch (event.key) {
         case "meta": refresh++;
@@ -139,14 +139,14 @@ document.onkeyup = function(event){
 
     //checks if keypress is in the chosen word & replaces dash in guesslist array with keypress value at the given index
     for (let index = 0; index < candyName.length; index++) {
-        if(candyname[index] === keyPress){
+        if(candyName[index] === keyPress){
             guesslist[index] = keyPress;
             count++;
             // indices.push(index);
         }
     }
 
-    //shows uodated guess lsit on screen
+    //shows updated guess list on screen
     targetGuess.innerHTML = guesslist.join(" ");
 
     if (count === candyName.length) {
@@ -154,7 +154,7 @@ document.onkeyup = function(event){
         resetGame();
         chooseCandy();
         candyName = chooseName();
-    }else if (guessLeft < 1 && count !== candyName.length) {
+    } else if (guessLeft < 1 && count !== candyName.length) {
         loss++;
         resetGame();
         chooseCandy();
