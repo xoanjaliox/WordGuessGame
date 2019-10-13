@@ -96,7 +96,7 @@ function chooseCandy(){
 }
 
 function resetGame(){
-    //resets vairables
+    //resets variables
     guessLeft = 12;
     guesslist = [];
     guessedLetters = [];
@@ -139,7 +139,7 @@ document.onkeyup = function(event){
 
     //checks if keypress is in the chosen word & replaces dash in guesslist array with keypress value at the given index
     for (let index = 0; index < candyName.length; index++) {
-        if(cadyname[index] === keyPress){
+        if(candyname[index] === keyPress){
             guesslist[index] = keyPress;
             count++;
             // indices.push(index);
@@ -154,7 +154,7 @@ document.onkeyup = function(event){
         resetGame();
         chooseCandy();
         candyName = chooseName();
-    }else if (guessLeft <1 && count !== candyName.length) {
+    }else if (guessLeft < 1 && count !== candyName.length) {
         loss++;
         resetGame();
         chooseCandy();
